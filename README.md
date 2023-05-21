@@ -5,7 +5,7 @@
 # Limpeza e leve re-estilização para o menu navbar
 
 #Utilização de componentes como ImageGallery e Benefits criados no Hackathon III
-
+<img src="https://cdn.discordapp.com/attachments/728770954096017419/1109856507950026782/image.png">
 
 # Fashion starter by deco.cx
 
