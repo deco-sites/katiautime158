@@ -1,7 +1,4 @@
-
 import type { Image } from "deco-sites/std/components/types.ts";
-
-
 
 import Alert from "./Alert.tsx";
 import Navbar from "./Navbar.tsx";
@@ -38,31 +35,25 @@ export interface Props {
    * @description Product suggestions displayed on search
    */
 
-
   /**
    * @title Enable Top Search terms
    */
-
 }
 
 function Header(
   {
     alerts,
-  
+
     navItems = [],
-  
   }: Props,
 ) {
- 
   return (
     <>
       <header style={{ height: headerHeight }}>
         <div class="bg-base-100 fixed w-full z-50">
           <Alert alerts={alerts} />
-          <Navbar items={navItems}  />
+          <Navbar items={navItems} />
         </div>
-
-      
       </header>
     </>
   );

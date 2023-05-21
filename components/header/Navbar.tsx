@@ -1,14 +1,11 @@
-
 import Buttons from "$store/islands/HeaderButton.tsx";
 import Icon from "$store/components/ui/Icon.tsx";
 import NavItem from "./NavItem.tsx";
 import { navbarHeight } from "./constants.ts";
 import type { INavItem } from "./NavItem.tsx";
 
-
 function Navbar({ items }: {
   items: INavItem[];
-
 }) {
   return (
     <>
@@ -27,8 +24,6 @@ function Navbar({ items }: {
         >
           <Icon id="Logo" width={126} height={16} />
         </a>
-
-      
       </div>
 
       {/* Desktop Version */}
@@ -42,7 +37,6 @@ function Navbar({ items }: {
           {items.map((item) => <NavItem item={item} />)}
         </div>
         <div class="flex-none w-44 flex items-center justify-end gap-2">
-
         </div>
       </div>
     </>
