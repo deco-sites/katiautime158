@@ -1,6 +1,8 @@
 import Icon, { AvailableIcons } from "$store/components/ui/Icon.tsx";
-import Newsletter from "$store/islands/Newsletter.tsx";
+
 import type { ComponentChildren } from "preact";
+import Image from "deco-sites/std/components/Image.tsx";
+import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 
 export type IconItem = { icon: AvailableIcons };
 export type StringItem = {
@@ -21,7 +23,7 @@ const isIcon = (item: Item): item is IconItem =>
 
 function SectionItem({ item }: { item: Item }) {
   return (
-    <span class="text-primary-content">
+    <span class="text-success-content">
       {isIcon(item)
         ? (
           <div class="border-base-100 border border-solid py-1.5 px-2.5">
@@ -53,24 +55,33 @@ function FooterContainer(
 
 export interface Props {
   sections?: Section[];
+  blockperson: Array<{
+    photoPerson: {
+      src: LiveImage;
+      alt: string;
+    };
+    iconLink: Array<{
+      infoPerson: {
+        href: string;
+        src: LiveImage;
+        alt?: string;
+      };
+    }>;
+  }>;
 }
 
-function Footer({ sections = [] }: Props) {
+function Footer({ sections = [], blockperson = [] }: Props) {
   return (
-    <footer class="w-full bg-primary flex flex-col divide-y divide-primary-content">
+    <footer class="w-full bg-success flex flex-col divide-y divide-primary-content">
       <div>
         <div class="container w-full flex flex-col divide-y divide-primary-content">
-          <FooterContainer>
-            <Newsletter />
-          </FooterContainer>
-
           <FooterContainer>
             {/* Desktop view */}
             <ul class="hidden sm:flex flex-row gap-20">
               {sections.map((section) => (
                 <li>
                   <div>
-                    <span class="font-medium text-xl text-primary-content">
+                    <span class="font-medium text-xl text-success-content">
                       {section.label}
                     </span>
 
@@ -94,7 +105,7 @@ function Footer({ sections = [] }: Props) {
             <ul class="flex flex-col sm:hidden sm:flex-row gap-4">
               {sections.map((section) => (
                 <li>
-                  <span class="text-primary-content">
+                  <span class="text-success-content">
                     <details>
                       <summary>
                         {section.label}
@@ -119,11 +130,58 @@ function Footer({ sections = [] }: Props) {
           </FooterContainer>
         </div>
       </div>
-
+      <div class="container w-full">
+        <div class="text-center">
+          <h4>SunnySide</h4>
+          <div class="flex flex-row justify-center ">
+            <div class="flex flex-row gap-x-2.5">
+              {blockperson.map((
+                {
+                  photoPerson,
+                  iconLink,
+                },
+                index,
+              ) => (
+                <>
+                  <div class="flex flex-col items-center ">
+                    <p class="flex flex-col items-center">
+                      <img
+                        class="rounded-full"
+                        width={80}
+                        height={80}
+                        src={photoPerson.src}
+                        alt={photoPerson.alt}
+                      />
+                      {photoPerson.alt}
+                    </p>
+                    <div class="flex-row flex gap-x-2.5 mt-4">
+                      {iconLink.map((
+                        {
+                          infoPerson,
+                        },
+                        index,
+                      ) => (
+                        <a href={infoPerson.href} title={infoPerson.alt}>
+                          <img
+                            width={40}
+                            height={40}
+                            src={infoPerson.src}
+                            alt={infoPerson.alt}
+                          />
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
       <div>
         <div class="container w-full">
           <FooterContainer class="flex justify-between w-full">
-            <span class="flex items-center gap-1 text-primary-content">
+            <span class="flex items-center gap-1 text-success-content">
               Powered by{" "}
               <a
                 href="https://www.deco.cx"
@@ -142,7 +200,7 @@ function Footer({ sections = [] }: Props) {
                   aria-label="Instagram logo"
                 >
                   <Icon
-                    class="text-primary-content"
+                    class="text-success-content"
                     width={32}
                     height={32}
                     id="Instagram"
@@ -158,7 +216,7 @@ function Footer({ sections = [] }: Props) {
                   aria-label="Discord logo"
                 >
                   <Icon
-                    class="text-primary-content"
+                    class="text-success-content"
                     width={32}
                     height={32}
                     id="Discord"

@@ -8030,9 +8030,79 @@
         "sections": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L2NvbXBvbmVudHMvZm9vdGVyL0Zvb3Rlci50c3g=@Section[]",
           "title": "Sections"
+        },
+        "blockperson": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "photoPerson": {
+                "type": "object",
+                "properties": {
+                  "src": {
+                    "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+                    "title": "Src"
+                  },
+                  "alt": {
+                    "type": "string",
+                    "title": "Alt"
+                  }
+                },
+                "required": [
+                  "src",
+                  "alt"
+                ],
+                "title": "Photo Person"
+              },
+              "iconLink": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "infoPerson": {
+                      "type": "object",
+                      "properties": {
+                        "href": {
+                          "type": "string",
+                          "title": "Href"
+                        },
+                        "src": {
+                          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+                          "title": "Src"
+                        },
+                        "alt": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "title": "Alt"
+                        }
+                      },
+                      "required": [
+                        "href",
+                        "src"
+                      ],
+                      "title": "Info Person"
+                    }
+                  },
+                  "required": [
+                    "infoPerson"
+                  ]
+                },
+                "title": "Icon Link"
+              }
+            },
+            "required": [
+              "photoPerson",
+              "iconLink"
+            ]
+          },
+          "title": "Blockperson"
         }
       },
-      "required": [],
+      "required": [
+        "blockperson"
+      ],
       "title": "deco-sites/katiautime158/components/footer/Footer.tsx@Props"
     },
     "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L2NvbXBvbmVudHMvaGVhZGVyL0hlYWRlci50c3g=@NavItem": {
@@ -8803,7 +8873,11 @@
         },
         "name": {
           "type": "string",
-          "title": "Name"
+          "title": "The audience name (will be used on cookies).",
+          "description": "Add a meaningful short word for the audience name.",
+          "maxLength": 22,
+          "minLength": 3,
+          "pattern": "^[A-Za-z0-9_]+$"
         },
         "routes": {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]",
