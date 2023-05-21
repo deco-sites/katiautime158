@@ -82,6 +82,7 @@
               "$live/sections/UseSlot.tsx",
               "deco-sites/katiautime158/sections/BannerGrid.tsx",
               "deco-sites/katiautime158/sections/BannerPLP.tsx",
+              "deco-sites/katiautime158/sections/Benefits.tsx",
               "deco-sites/katiautime158/sections/Carousel.tsx",
               "deco-sites/katiautime158/sections/CookieConsent.tsx",
               "deco-sites/katiautime158/sections/DesignSystem.tsx",
@@ -89,6 +90,7 @@
               "deco-sites/katiautime158/sections/Footer.tsx",
               "deco-sites/katiautime158/sections/Header.tsx",
               "deco-sites/katiautime158/sections/Highlights.tsx",
+              "deco-sites/katiautime158/sections/ImageGallery.tsx",
               "deco-sites/katiautime158/sections/LinkTree.tsx",
               "deco-sites/katiautime158/sections/ProductDetails.tsx",
               "deco-sites/katiautime158/sections/ProductShelf.tsx",
@@ -7201,6 +7203,57 @@
       "required": [],
       "title": "deco-sites/katiautime158/components/ui/BannerPLP.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0JlbmVmaXRzLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "benefits": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "srcImg": {
+                "type": "string",
+                "title": "Src Img"
+              },
+              "benefitsTitle": {
+                "type": "string",
+                "title": "Benefits Title"
+              },
+              "benefitsDesc": {
+                "type": "string",
+                "title": "Benefits Desc"
+              }
+            },
+            "required": [
+              "srcImg",
+              "benefitsTitle",
+              "benefitsDesc"
+            ]
+          },
+          "title": "Benefits"
+        },
+        "benefitsWrapper": {
+          "type": "object",
+          "properties": {
+            "benefitTitle": {
+              "type": "string",
+              "title": "Benefit Title"
+            },
+            "benefitDescription": {
+              "type": "string",
+              "title": "Benefit Description"
+            }
+          },
+          "required": [
+            "benefitTitle",
+            "benefitDescription"
+          ],
+          "title": "Benefits Wrapper"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/katiautime158/sections/Benefits.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L2NvbXBvbmVudHMvdWkvQmFubmVyQ2Fyb3VzZWwudHN4@Banner": {
       "type": "object",
       "properties": {
@@ -7502,7 +7555,7 @@
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Colors&b966eeb0bbdb3699ee11b12ce6a39cc4": {
+    "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@41af695d69aaebaff97128e0876cdd46&Colors": {
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Colors"
@@ -7518,7 +7571,7 @@
           "required": []
         }
       ],
-      "title": "Colors&b966eeb0bbdb3699ee11b12ce6a39cc4"
+      "title": "41af695d69aaebaff97128e0876cdd46&Colors"
     },
     "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Miscellaneous": {
       "type": "object",
@@ -7621,7 +7674,7 @@
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Colors&b966eeb0bbdb3699ee11b12ce6a39cc4",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@41af695d69aaebaff97128e0876cdd46&Colors",
           "title": "Colors"
         },
         "miscellaneous": {
@@ -8030,51 +8083,80 @@
         "sections": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L2NvbXBvbmVudHMvZm9vdGVyL0Zvb3Rlci50c3g=@Section[]",
           "title": "Sections"
+        },
+        "blockperson": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "photoPerson": {
+                "type": "object",
+                "properties": {
+                  "src": {
+                    "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+                    "title": "Src"
+                  },
+                  "alt": {
+                    "type": "string",
+                    "title": "Alt"
+                  }
+                },
+                "required": [
+                  "src",
+                  "alt"
+                ],
+                "title": "Photo Person"
+              },
+              "iconLink": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "infoPerson": {
+                      "type": "object",
+                      "properties": {
+                        "href": {
+                          "type": "string",
+                          "title": "Href"
+                        },
+                        "src": {
+                          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+                          "title": "Src"
+                        },
+                        "alt": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "title": "Alt"
+                        }
+                      },
+                      "required": [
+                        "href",
+                        "src"
+                      ],
+                      "title": "Info Person"
+                    }
+                  },
+                  "required": [
+                    "infoPerson"
+                  ]
+                },
+                "title": "Icon Link"
+              }
+            },
+            "required": [
+              "photoPerson",
+              "iconLink"
+            ]
+          },
+          "title": "Blockperson"
         }
       },
-      "required": [],
+      "required": [
+        "blockperson"
+      ],
       "title": "deco-sites/katiautime158/components/footer/Footer.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L2NvbXBvbmVudHMvc2VhcmNoL1NlYXJjaGJhci50c3g=@EditableProps": {
-      "type": "object",
-      "properties": {
-        "placeholder": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Placeholder",
-          "description": "Search bar default placeholder message",
-          "default": "What are you looking for?"
-        },
-        "action": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Page path",
-          "description": "When user clicks on the search button, navigate it to",
-          "default": "/s"
-        },
-        "name": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Term name",
-          "description": "Querystring param used when navigating the user",
-          "default": "q"
-        },
-        "query": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Query"
-        }
-      },
-      "required": [],
-      "title": "EditableProps"
     },
     "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L2NvbXBvbmVudHMvaGVhZGVyL0hlYWRlci50c3g=@NavItem": {
       "type": "object",
@@ -8171,23 +8253,10 @@
           },
           "title": "Alerts"
         },
-        "searchbar": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L2NvbXBvbmVudHMvc2VhcmNoL1NlYXJjaGJhci50c3g=@EditableProps",
-          "title": "Search Bar"
-        },
         "navItems": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L2NvbXBvbmVudHMvaGVhZGVyL0hlYWRlci50c3g=@NavItem[]",
           "title": "Navigation items",
           "description": "Navigation items used both on mobile and desktop menus"
-        },
-        "products": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@Product[]|null",
-          "title": "Product suggestions",
-          "description": "Product suggestions displayed on search"
-        },
-        "suggestions": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@Suggestion|null",
-          "title": "Enable Top Search terms"
         }
       },
       "required": [
@@ -8246,6 +8315,54 @@
         "title"
       ],
       "title": "deco-sites/katiautime158/components/ui/Highlights.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0ltYWdlR2FsbGVyeS50c3g=@ImageGallery": {
+      "type": "object",
+      "properties": {
+        "image": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Image"
+        },
+        "alt": {
+          "type": "string",
+          "title": "Alt"
+        }
+      },
+      "required": [
+        "image",
+        "alt"
+      ],
+      "title": "ImageGallery"
+    },
+    "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0ltYWdlR2FsbGVyeS50c3g=@ImageGallery[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0ltYWdlR2FsbGVyeS50c3g=@ImageGallery"
+      },
+      "title": "ImageGallery[]"
+    },
+    "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0ltYWdlR2FsbGVyeS50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "description": {
+          "type": "string",
+          "title": "Description"
+        },
+        "images": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0ltYWdlR2FsbGVyeS50c3g=@ImageGallery[]",
+          "title": "Images"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "images"
+      ],
+      "title": "deco-sites/katiautime158/sections/ImageGallery.tsx@Props"
     },
     "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L2NvbXBvbmVudHMvdWkvTGlua1RyZWUudHN4@Link": {
       "type": "object",
@@ -8857,7 +8974,11 @@
         },
         "name": {
           "type": "string",
-          "title": "Name"
+          "title": "The audience name (will be used on cookies).",
+          "description": "Add a meaningful short word for the audience name.",
+          "maxLength": 22,
+          "minLength": 3,
+          "pattern": "^[A-Za-z0-9_]+$"
         },
         "routes": {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]",
@@ -8973,7 +9094,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -8991,13 +9112,13 @@
           ]
         }
       ],
-      "title": "95abd76f92dd138f258080286726977e|WorkflowRef"
+      "title": "6fafe0f553db3c0685828404a37be338|WorkflowRef"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef",
           "title": "Workflow"
         },
         "id": {
@@ -10846,6 +10967,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0JlbmVmaXRzLnRzeA==": {
+      "title": "deco-sites/katiautime158/sections/Benefits.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0JlbmVmaXRzLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/katiautime158/sections/Benefits.tsx"
+          ],
+          "default": "deco-sites/katiautime158/sections/Benefits.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0Nhcm91c2VsLnRzeA==": {
       "title": "deco-sites/katiautime158/sections/Carousel.tsx",
       "type": "object",
@@ -10985,6 +11127,27 @@
             "deco-sites/katiautime158/sections/Highlights.tsx"
           ],
           "default": "deco-sites/katiautime158/sections/Highlights.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0ltYWdlR2FsbGVyeS50c3g=": {
+      "title": "deco-sites/katiautime158/sections/ImageGallery.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0ltYWdlR2FsbGVyeS50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/katiautime158/sections/ImageGallery.tsx"
+          ],
+          "default": "deco-sites/katiautime158/sections/ImageGallery.tsx"
         }
       }
     },
@@ -12245,6 +12408,9 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0Jhbm5lclBMUC50c3g="
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0JlbmVmaXRzLnRzeA=="
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0Nhcm91c2VsLnRzeA=="
         },
         {
@@ -12264,6 +12430,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0hpZ2hsaWdodHMudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0ltYWdlR2FsbGVyeS50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0xpbmtUcmVlLnRzeA=="
