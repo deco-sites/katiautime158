@@ -8,7 +8,7 @@ export interface ImageGallery {
 export interface Props {
   title: string;
   description: string;
-  images: ImageGallery[]; 
+  images: ImageGallery[];
 }
 
 export default function ImageGallery(props: Props) {
