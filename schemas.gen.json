@@ -89,6 +89,7 @@
               "deco-sites/katiautime158/sections/Footer.tsx",
               "deco-sites/katiautime158/sections/Header.tsx",
               "deco-sites/katiautime158/sections/Highlights.tsx",
+              "deco-sites/katiautime158/sections/ImageGallery.tsx",
               "deco-sites/katiautime158/sections/LinkTree.tsx",
               "deco-sites/katiautime158/sections/ProductDetails.tsx",
               "deco-sites/katiautime158/sections/ProductShelf.tsx",
@@ -7502,7 +7503,7 @@
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@44f7d1c4a7d623ae0816831f3ce5eded&Colors": {
+    "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@41af695d69aaebaff97128e0876cdd46&Colors": {
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Colors"
@@ -7518,7 +7519,7 @@
           "required": []
         }
       ],
-      "title": "44f7d1c4a7d623ae0816831f3ce5eded&Colors"
+      "title": "41af695d69aaebaff97128e0876cdd46&Colors"
     },
     "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@Miscellaneous": {
       "type": "object",
@@ -7621,7 +7622,7 @@
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@44f7d1c4a7d623ae0816831f3ce5eded&Colors",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0Rlc2lnblN5c3RlbS50c3g=@41af695d69aaebaff97128e0876cdd46&Colors",
           "title": "Colors"
         },
         "miscellaneous": {
@@ -8262,6 +8263,54 @@
         "title"
       ],
       "title": "deco-sites/katiautime158/components/ui/Highlights.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0ltYWdlR2FsbGVyeS50c3g=@ImageGallery": {
+      "type": "object",
+      "properties": {
+        "image": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Image"
+        },
+        "alt": {
+          "type": "string",
+          "title": "Alt"
+        }
+      },
+      "required": [
+        "image",
+        "alt"
+      ],
+      "title": "ImageGallery"
+    },
+    "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0ltYWdlR2FsbGVyeS50c3g=@ImageGallery[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0ltYWdlR2FsbGVyeS50c3g=@ImageGallery"
+      },
+      "title": "ImageGallery[]"
+    },
+    "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0ltYWdlR2FsbGVyeS50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "description": {
+          "type": "string",
+          "title": "Description"
+        },
+        "images": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0ltYWdlR2FsbGVyeS50c3g=@ImageGallery[]",
+          "title": "Images"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "images"
+      ],
+      "title": "deco-sites/katiautime158/sections/ImageGallery.tsx@Props"
     },
     "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L2NvbXBvbmVudHMvdWkvTGlua1RyZWUudHN4@Link": {
       "type": "object",
@@ -11008,6 +11057,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0ltYWdlR2FsbGVyeS50c3g=": {
+      "title": "deco-sites/katiautime158/sections/ImageGallery.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0ltYWdlR2FsbGVyeS50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/katiautime158/sections/ImageGallery.tsx"
+          ],
+          "default": "deco-sites/katiautime158/sections/ImageGallery.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0xpbmtUcmVlLnRzeA==": {
       "title": "deco-sites/katiautime158/sections/LinkTree.tsx",
       "type": "object",
@@ -12284,6 +12354,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0hpZ2hsaWdodHMudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0ltYWdlR2FsbGVyeS50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0xpbmtUcmVlLnRzeA=="

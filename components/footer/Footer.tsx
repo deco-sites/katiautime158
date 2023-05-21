@@ -131,7 +131,7 @@ function Footer({ sections = [], blockperson = [] }: Props) {
         </div>
       </div>
       <div class="container w-full">
-        <div class="text-center">
+        <div class="text-center my-10">
           <h4>SunnySide</h4>
           <div class="flex flex-row justify-center ">
             <div class="flex flex-row gap-x-2.5">
@@ -163,8 +163,8 @@ function Footer({ sections = [], blockperson = [] }: Props) {
                       ) => (
                         <a href={infoPerson.href} title={infoPerson.alt}>
                           <img
-                            width={40}
-                            height={40}
+                            width={25}
+                            height={25}
                             src={infoPerson.src}
                             alt={infoPerson.alt}
                           />
