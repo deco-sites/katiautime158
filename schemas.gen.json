@@ -82,6 +82,7 @@
               "$live/sections/UseSlot.tsx",
               "deco-sites/katiautime158/sections/BannerGrid.tsx",
               "deco-sites/katiautime158/sections/BannerPLP.tsx",
+              "deco-sites/katiautime158/sections/Benefits.tsx",
               "deco-sites/katiautime158/sections/Carousel.tsx",
               "deco-sites/katiautime158/sections/CookieConsent.tsx",
               "deco-sites/katiautime158/sections/DesignSystem.tsx",
@@ -7202,6 +7203,57 @@
       "required": [],
       "title": "deco-sites/katiautime158/components/ui/BannerPLP.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0JlbmVmaXRzLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "benefits": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "srcImg": {
+                "type": "string",
+                "title": "Src Img"
+              },
+              "benefitsTitle": {
+                "type": "string",
+                "title": "Benefits Title"
+              },
+              "benefitsDesc": {
+                "type": "string",
+                "title": "Benefits Desc"
+              }
+            },
+            "required": [
+              "srcImg",
+              "benefitsTitle",
+              "benefitsDesc"
+            ]
+          },
+          "title": "Benefits"
+        },
+        "benefitsWrapper": {
+          "type": "object",
+          "properties": {
+            "benefitTitle": {
+              "type": "string",
+              "title": "Benefit Title"
+            },
+            "benefitDescription": {
+              "type": "string",
+              "title": "Benefit Description"
+            }
+          },
+          "required": [
+            "benefitTitle",
+            "benefitDescription"
+          ],
+          "title": "Benefits Wrapper"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/katiautime158/sections/Benefits.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L2NvbXBvbmVudHMvdWkvQmFubmVyQ2Fyb3VzZWwudHN4@Banner": {
       "type": "object",
       "properties": {
@@ -10915,6 +10967,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0JlbmVmaXRzLnRzeA==": {
+      "title": "deco-sites/katiautime158/sections/Benefits.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0JlbmVmaXRzLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/katiautime158/sections/Benefits.tsx"
+          ],
+          "default": "deco-sites/katiautime158/sections/Benefits.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0Nhcm91c2VsLnRzeA==": {
       "title": "deco-sites/katiautime158/sections/Carousel.tsx",
       "type": "object",
@@ -12333,6 +12406,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0Jhbm5lclBMUC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0JlbmVmaXRzLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXRpYXV0aW1lMTU4L3NlY3Rpb25zL0Nhcm91c2VsLnRzeA=="
