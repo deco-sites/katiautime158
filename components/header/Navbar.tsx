@@ -27,17 +27,22 @@ function Navbar({ items }: {
       </div>
 
       {/* Desktop Version */}
-      <div class="hidden md:flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6">
+      <div class="hidden md:flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6 py-2">
+
         <div class="flex-none w-44">
           <a href="/" aria-label="Store logo" class="block px-4 py-3 w-[160px]">
             <Icon id="Logo" width={126} height={16} />
           </a>
         </div>
-        <div class="flex-auto flex justify-center">
+
+        <div class="flex-auto flex justify-end ">
           {items.map((item) => <NavItem item={item} />)}
         </div>
+
         <div class="flex-none w-44 flex items-center justify-end gap-2">
+          <button class="btn btn-ghost rounded-full"></button>
         </div>
+
       </div>
     </>
   );
